@@ -6,8 +6,6 @@ RUN apt-get update
 RUN apt-get install lib32z1 lib32ncurses5 lib32stdc++6 -y
 RUN chmod -R +xr /tmp/android-sdk-linux*
 RUN mv /tmp/android-sdk-linux* /opt/android-sdk-linux
-FROM yaramohamed/jenkins-ubuntu16:vSDK
-USER root
 RUN wget https://services.gradle.org/distributions/gradle-3.3-bin.zip
 RUN mkdir /opt/gradle
 RUN unzip -d /opt/gradle gradle-3.3-bin.zip
