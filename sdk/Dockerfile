@@ -6,5 +6,5 @@ RUN apt-get update
 RUN apt-get install lib32z1 lib32ncurses5 lib32stdc++6 -y
 RUN chmod -R +xr /tmp/android-sdk-linux*
 RUN mv /tmp/android-sdk-linux* /opt/android-sdk-linux
-USER jenkins
 RUN echo export PATH=/opt/android-sdk-linux/tools:/opt/android-sdk-linux/platform-tools:$PATH >> ~/.bashrc
+USER jenkins
